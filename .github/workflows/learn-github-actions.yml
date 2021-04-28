@@ -14,5 +14,5 @@ jobs:
         env:
               myEnvVar: My env variable value
               myEnvSecre: ${{secrets.MYTESTSECRET}}
-        run: echo "${myEnvVar} ${env.myEnvSecre}"
+        run: echo "${env.myEnvVar} ${env.myEnvSecre}"
 
