@@ -10,4 +10,8 @@ jobs:
       - run: bats -v
       - run: echo "this is printed from yaml file"
       - run: echo ${{secrets.MYTESTSECRET}}
+      - env:
+              myEnvVar: My env variable value
+              myEnvSecre: ${{secrets.MYTESTSECRET}}
+      - run: echo env.myEnvSecre
 
